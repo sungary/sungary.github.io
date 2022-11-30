@@ -4,10 +4,11 @@ import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
   background: #e6f7ff;
+  width: 100%;
   height: 85px;
   display: flex;
   justify-content: space-between;
-  z-index: 12;
+  border-bottom: 1px solid black;
 `;
   
 export const NavLink = styled(Link)`
@@ -15,19 +16,24 @@ export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 1.5rem;
-  height: 100%;
+  padding: 1rem;
   cursor: pointer;
   &.active {
     color: #000000;
   }
   font-weight: bold;
+  font-size: large;
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+  border: 1px solid black;
+  justify-content: space-between;
 `;
   
 export const Bars = styled(FaBars)`
   display: none;
-  color: #808080;
-  @media screen and (max-width: 768px) {
+  color: #000000;
+  @media screen and (max-width: 720px) {
     display: block;
     position: absolute;
     top: 0;
@@ -41,9 +47,9 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 5rem;
   margin-right: -24px;
-  white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  white-space: nowrap;
 `;

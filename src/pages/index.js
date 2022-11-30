@@ -1,15 +1,9 @@
 import React from 'react';
+import "./pages.css";
 
 const Home = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Right',
-                alignItems: 'Right',
-                height: '100vh'
-            }}
-            >
+        <div className="header">
             <h1>Home Page</h1>
         </div>
     );

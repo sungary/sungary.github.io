@@ -11,10 +11,9 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" exact element={<Home/>}/>
-          <Route path="/PageTest" element={<PageTest/>} />
+          <Route path="/PageTest" element={<PageTest/>}/>
         </Routes>
     </Router>
-    
 
   );
 }
