@@ -1,15 +1,9 @@
 import React from 'react';
+import "./pages.css";
 
 const PageTest = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'Right',
-                alignItems: 'Right',
-                height: '100vh'
-            }}
-            >
+        <div className="header">
             <h1>Test Page</h1>
         </div>
     );

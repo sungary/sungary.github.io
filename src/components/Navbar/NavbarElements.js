@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
-  background: #e6f7ff;
+  background: #f8f8ff;
   width: 100%;
-  height: 85px;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid black;
@@ -14,10 +14,12 @@ export const Nav = styled.nav`
 export const NavLink = styled(Link)`
   color: #808080;
   display: flex;
-  align-items: center;
+  align-contents: center;
   text-decoration: none;
-  padding: 1rem;
-  cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
   &.active {
     color: #000000;
   }
@@ -26,20 +28,18 @@ export const NavLink = styled(Link)`
   @media screen and (max-width: 720px) {
     display: none;
   }
-  border: 1px solid black;
-  justify-content: space-between;
+
 `;
-  
+
 export const Bars = styled(FaBars)`
   display: none;
   color: #000000;
   @media screen and (max-width: 720px) {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: x-large;
     cursor: pointer;
   }
 `;
@@ -48,8 +48,8 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  top: 1.5rem;
-  right: 5rem;
-  margin-right: -24px;
   white-space: nowrap;
+  padding-top: 1.1rem;
+  padding-bottom: 1rem;
+  right: 5rem;
 `;

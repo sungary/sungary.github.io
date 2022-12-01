@@ -1,18 +1,17 @@
 import React from 'react';
-import {Nav, NavLink, Bars, NavMenu} from './NavbarElements';
+import {Nav, NavLink, NavMenu} from './NavbarElements';
 import "./index.css";
+import Sidebar from './Sidebar';
 
 const Navbar = () => {
     return (
         <>
+            <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
             <Nav>
                 <div className="myname">
                     Test Name
                 </div>
-
-                <Bars>
-                </Bars>
-
+                
                 <NavMenu>
                     <NavLink to='/' >
                         Home
