@@ -50,7 +50,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-    fill: #adadad;
+    fill: #f8f8ff;
 }
 
 /* Wrapper for item list */
@@ -75,7 +75,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .bm-item:hover {
-    color: #ffffff;
+    color: black;
 }
 
 /* Hides the Hamburger Menu when screen is bigger */

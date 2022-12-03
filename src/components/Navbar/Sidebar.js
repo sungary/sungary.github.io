@@ -9,8 +9,8 @@ const Sidebar = () => {
         <NavLink to='/' >
           Home
         </NavLink>
-        <NavLink to='/PageTest' >
-          PageTest
+        <NavLink to='/Projects' >
+          Projects
         </NavLink>
         <NavLink as="a" href="https://github.com/sungary" rel="noreferrer" target="_blank">
           GitHub

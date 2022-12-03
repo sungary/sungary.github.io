@@ -9,15 +9,15 @@ const Navbar = () => {
             <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
             <Nav>
                 <div className="myname">
-                    Test Name
+                    Gary Sun
                 </div>
                 
                 <NavMenu>
                     <NavLink to='/' >
                         Home
                     </NavLink>
-                    <NavLink to='/PageTest' >
-                        PageTest
+                    <NavLink to='/Projects' >
+                        Projects
                     </NavLink>
                     <NavLink as="a" href="https://github.com/sungary" rel="noreferrer" target="_blank">
                         GitHub
