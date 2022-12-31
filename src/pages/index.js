@@ -2,7 +2,7 @@ import React from 'react';
 import "./pages.css";
 
 const Home = () => {
-    document.title = "Home | Gary Sun";
+    document.title = "Home";
     return (
         <div>
             <h1 className='title'>Portfolio</h1>
