@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
-  background: #f8f8ff;
+  background: white;
   width: 100%;
   height: 4rem;
   display: flex;
@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 `;
   
 export const NavLink = styled(Link)`
-  color: #000000;
+  color: black;
   display: flex;
   align-contents: center;
   text-decoration: none;
@@ -21,7 +21,7 @@ export const NavLink = styled(Link)`
   padding-top: .25rem;
   padding-bottom: .25rem;
   &.active {
-    color: #000000;
+    color: black;
   }
   font-weight: bold;
   font-size: large;
@@ -33,7 +33,7 @@ export const NavLink = styled(Link)`
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: #000000;
+  color: black;
   @media screen and (max-width: 720px) {
     display: block;
     position: absolute;
