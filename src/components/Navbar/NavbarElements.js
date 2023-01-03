@@ -25,7 +25,7 @@ export const NavLink = styled(Link)`
   }
   font-weight: bold;
   font-size: large;
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 710px) {
     display: none;
   }
 
