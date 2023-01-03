@@ -3,17 +3,30 @@ import "./pages.css";
 
 var isClickEventListener = false;
 
+// gets the data/information of the card that is clicked on
+function getData(e) {
+    if(e.target.className.includes('card') || e.target.className.includes('container')){
+        document.getElementById('h3Value').textContent = e.target.querySelector('h3').innerText
+        document.getElementById('pValue').textContent = e.target.querySelector('p').innerText
+    } else if(e.target.parentNode.className === 'container'){
+        document.getElementById('h3Value').textContent = e.target.parentNode.querySelector('h3').innerText
+        document.getElementById('pValue').textContent = e.target.parentNode.querySelector('p').innerText
+    }
+
+}
+
+// handles what happens when there is a click on the page. If it is a card, then it will call getData() and display the popup/overlay with its relevant data
 const onClick = (e) => {
-    
     if(window.location.pathname === '/Projects'){
         isClickEventListener = true;
-        if(document.getElementById('popup1').classList.contains('overlayOn')){
+        if(document.getElementById('popup').classList.contains('overlayOn')){
             if(!(e.target.className.includes('card') || e.target.className.includes('container') || e.target.parentNode.className === 'container')){
-                document.getElementById('popup1').className = 'overlayOff'
+                document.getElementById('popup').className = 'overlayOff'
             }
-        } else if(document.getElementById('popup1').classList.contains('overlayOff')){
+        } else if(document.getElementById('popup').classList.contains('overlayOff')){
             if(e.target.className.includes('card') || e.target.className.includes('container') || e.target.parentNode.className === 'container'){
-                document.getElementById('popup1').className = 'overlayOn'
+                getData(e)
+                document.getElementById('popup').className = 'overlayOn'
             }
         }
     } else if(isClickEventListener){
@@ -32,8 +45,8 @@ const Projects = () => {
             <div className='outerCard'>
                 <div className='card' >
                     <div className='container'>
-                        <h3>Test1</h3>
-                        <p>Description Info & Stuff</p>
+                        <h3>Test 1</h3>
+                        <p>Description Info & Stuff 1</p>
                     </div>
                 </div>
             </div>
@@ -41,22 +54,22 @@ const Projects = () => {
             <div className='outerCard'>
                 <div className='card'>
                     <div className='container'>
-                        <h3>Test2</h3>
-                        <p>Description Info & Stuff</p>
+                        <h3>Test 2</h3>
+                        <p>Description Info & Stuff 2</p>
                     </div>
                 </div>
             </div>
 
-            <div id="popup1" className='overlayOff' >
+            {/* This is where the popup/overlay is shown which a card is clicked on */}
+            <div id="popup" className='overlayOff' >
                 <div className='outerCard'>
                     <div id='test' className='card'>
                         <div className='container'>
-                            <h3>Test</h3>
-                            <p>More Detailed Description Info & Stuff</p>
+                            <h3 id="h3Value">Default Title</h3>
+                            <p id="pValue">Default Data</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         
