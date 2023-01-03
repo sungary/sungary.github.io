@@ -45,8 +45,8 @@ const Projects = () => {
             <div className='outerCard'>
                 <div className='card' >
                     <div className='container'>
-                        <h3>Test 1</h3>
-                        <p>Description Info & Stuff 1</p>
+                        <h3 className="disableSelect">Test 1</h3>
+                        <p className="disableSelect">Description Info & Stuff 1</p>
                     </div>
                 </div>
             </div>
@@ -54,8 +54,8 @@ const Projects = () => {
             <div className='outerCard'>
                 <div className='card'>
                     <div className='container'>
-                        <h3>Test 2</h3>
-                        <p>Description Info & Stuff 2</p>
+                        <h3 className="disableSelect">Test 2</h3>
+                        <p className="disableSelect">Description Info & Stuff 2</p>
                     </div>
                 </div>
             </div>
