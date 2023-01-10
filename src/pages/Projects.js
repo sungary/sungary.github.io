@@ -1,5 +1,6 @@
 import React from 'react';
 import "./pages.css";
+import data from "../data.json";
 
 var isClickEventListener = false;
 
@@ -7,10 +8,10 @@ var isClickEventListener = false;
 function getData(e) {
     if(e.target.className.includes('card') || e.target.className.includes('container')){
         document.getElementById('h3Value').textContent = e.target.querySelector('h3').innerText
-        document.getElementById('pValue').textContent = e.target.querySelector('p').innerText
+        document.getElementById('pValue').textContent = data.Projects[e.target.getAttribute('datakey')].ldescription
     } else if(e.target.parentNode.className === 'container'){
         document.getElementById('h3Value').textContent = e.target.parentNode.querySelector('h3').innerText
-        document.getElementById('pValue').textContent = e.target.parentNode.querySelector('p').innerText
+        document.getElementById('pValue').textContent = data.Projects[e.target.getAttribute('datakey')].ldescription
     }
 
 }
@@ -30,7 +31,7 @@ const onClick = (e) => {
             }
         }
     } else if(isClickEventListener){
-        document.removeEventListener('click',onClick)
+        document.removeEventListener('click', onClick)
         isClickEventListener = false
     }
 }
@@ -38,27 +39,22 @@ const onClick = (e) => {
 const Projects = () => {
     document.title = "Projects";
     document.addEventListener('click', onClick)
+
     return (
         <div>
             <h1 className='title'>Projects</h1>
-            
-            <div className='outerCard'>
-                <div className='card' >
-                    <div className='container'>
-                        <h3 className="disableSelect">Test 1</h3>
-                        <p className="disableSelect">Description Info & Stuff 1</p>
-                    </div>
-                </div>
-            </div>
 
-            <div className='outerCard'>
-                <div className='card'>
-                    <div className='container'>
-                        <h3 className="disableSelect">Test 2</h3>
-                        <p className="disableSelect">Description Info & Stuff 2</p>
+            {/* This is where the cards are created */}
+            {data.Projects.map((card) => (
+                <div className='outerCard' key={card.id}>
+                    <div className='card' datakey={card.id}>
+                        <div className='container' datakey={card.id}>
+                            <h3 id="title" className="disableSelect" datakey={card.id}>{card.title}</h3>
+                            <p id="sdescription" className="disableSelect" datakey={card.id}>{card.sdescription}</p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> 
+            ))}
 
             {/* This is where the popup/overlay is shown which a card is clicked on */}
             <div id="popup" className='overlayOff' >
